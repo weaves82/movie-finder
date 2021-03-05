@@ -1,0 +1,8 @@
+.pagination {
+  display: flex;
+  align-items: center;
+}
+
+.pagination__buttons {
+  margin-left: calc(var(--padding)/2);
+}

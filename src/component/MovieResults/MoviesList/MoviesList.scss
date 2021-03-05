@@ -1,0 +1,7 @@
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 calc(var(--gutter) * -1) calc(var(--gutter) * -1);
+  justify-content: space-evenly;
+}

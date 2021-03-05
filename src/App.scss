@@ -1,0 +1,85 @@
+.light-theme {
+  --primary-color: #f6f9ec;
+  --secondary-color: #bbecff;
+  --disabled-color: #c4d6e6;
+  --default-text-color: #000;
+}
+.dark-theme {
+  --primary-color: #000000;
+  --secondary-color: #252525;
+  --disabled-color: #4a4a4b;
+  --default-text-color: #ffffff;
+}
+
+.app-logo {
+  height: 100px;
+}
+
+.app-container {
+  background: var(--primary-color);
+  min-height: 100vh;
+  color: var(--default-text-color);
+  .ui.button {
+    background: var(--secondary-color);
+    color: var(--default-text-color);
+    &:hover {
+      background: var(--disabled-color);
+    }
+  }
+  .ui.button.reversed {
+      background: var(--primary-color);
+      color: var(--default-text-color);
+      &:hover {
+        background: var(--disabled-color);
+      }
+  }
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-evenly;
+  @media only screen and (min-width: 680px) {
+    margin: 0 auto;
+    flex-wrap: wrap;
+  }
+  @media only screen and (min-width: 1024px) {
+    width: var(--site-width-desktop);
+  }
+}
+
+.app-header__ctas {
+  > div {
+    margin: calc(var(--padding)/2) 0;
+  }
+  @media only screen and (min-width: 680px) {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  @media only screen and (min-width: 1024px) {
+    width: var(--site-width-desktop);
+  }
+}
+
+.app-content {
+  margin: 0 auto;
+  padding: var(--padding);
+  background: var(--secondary-color);
+  border-radius: 10px 10px;
+  @media only screen and (min-width: 1024px) {
+    width: var(--site-width-desktop);
+  }
+}
+
+.app-results-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input {
+  padding: 8px;
+}
+

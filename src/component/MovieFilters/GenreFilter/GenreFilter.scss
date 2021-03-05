@@ -1,0 +1,8 @@
+.movie-filters__genres-collection {
+  display: grid;
+  grid-column-gap: 5px;
+  grid-template-columns: 120px 120px;
+  @media only screen and (min-width: 680px) {
+    grid-template-columns: 100px 120px 140px 100px;
+  }
+}

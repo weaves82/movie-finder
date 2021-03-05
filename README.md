@@ -1,3 +1,7 @@
+# This was a fun project during lockdown to find the trending movies online and also search for movies to watch
+
+To get it working locally will need to get an api key from https://www.themoviedb.org/ and then create a local .env file in the root and add in `REACT_APP_MOVIE_API=***APIKEY***`
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

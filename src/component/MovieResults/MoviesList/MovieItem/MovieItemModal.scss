@@ -1,0 +1,35 @@
+.movie-item-modal {
+  display: flex;
+}
+
+.movie-item-modal__image {
+  display: none;
+  @media only screen and (min-width: 680px) {
+    display: block;
+  }
+}
+
+.movie-item-modal__details {
+
+  @media only screen and (min-width: 680px) {
+    margin-left: var(--padding);
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.movie-item-modal__title {
+  font-size: 32px;
+  margin-bottom: var(--padding);
+  span {
+    font-size: 18px;
+  }
+}
+
+.movie-item-modal__info {
+  font-size: 16px;
+}
+
+.movie-item-modal__description {
+  margin-top: var(--padding);
+}
