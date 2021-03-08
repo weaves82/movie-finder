@@ -1,4 +1,12 @@
-# This was a fun project created during lockdownY using Typescript and Redux hooks to find the trending movies online and also search for movies to watch
+# This was a fun project created during lockdown to find the trending movies online and also provide a search for movies to watch
+
+Some of the features
+
+- React Hooks
+- Redux
+- Typescript
+- Unit tests with Jest
+- e2e with cypress
 
 To get it working locally will need to get an api key from https://www.themoviedb.org/ and then create a local .env file in the root and add in `REACT_APP_MOVIE_API=***APIKEY***`
 
