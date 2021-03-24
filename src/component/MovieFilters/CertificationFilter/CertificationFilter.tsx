@@ -3,19 +3,19 @@ import Checkbox from "../../UI/Form/Checkbox/Checkbox";
 import { getCertifications } from "../../../helpers/helpersTs";
 
 import {
-  filterProps,
-  filterArrayProps,
-  certObject,
+  FilterProps,
+  FilterArrayProps,
+  CertObject,
 } from "../../filterForm.model";
 
-const CertificationFilter = (props: filterProps) => {
-  const [filters, setFilters] = React.useState<filterArrayProps[]>([]);
-  const [checkBoxes, setCheckBoxes] = React.useState<certObject[]>([]);
+const CertificationFilter = (props: FilterProps) => {
+  const [filters, setFilters] = React.useState<FilterArrayProps[]>([]);
+  const [checkBoxes, setCheckBoxes] = React.useState<CertObject[]>([]);
 
   React.useEffect(() => {
     async function fetchData() {
       const certificates = await getCertifications();
-      let certArray: filterArrayProps[] = [];
+      let certArray: FilterArrayProps[] = [];
       certificates
         .filter((item: { certification: string }) => {
           return item.certification !== "A";

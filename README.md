@@ -6,7 +6,7 @@ Some of the features
 - Redux
 - Typescript
 - Unit tests with Jest
-- e2e with cypress
+- e2e with cypress (`yarn run cypress:open`)
 
 To get it working locally will need to get an api key from https://www.themoviedb.org/ and then create a local .env file in the root and add in `REACT_APP_MOVIE_API=***APIKEY***`
 
@@ -18,7 +18,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
-### `yarn start`
+### `yarn && yarn start`
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.

@@ -41,7 +41,8 @@
     "build": "react-scripts build",
     "test": "jest",
     "eject": "react-scripts eject",
-    "lint": "eslint 'src/**'"
+    "lint": "eslint 'src/**'",
+    "cypress:open": "cypress open"
   },
   "eslintConfig": {
     "extends": [

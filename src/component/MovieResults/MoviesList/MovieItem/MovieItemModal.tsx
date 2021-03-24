@@ -1,6 +1,6 @@
 import React from "react";
 // import { getCast, getDirector } from "../../../../helpers/helpers";
-import { MovieItem, MovieItemModal } from "../../../movieList.model";
+import { MovieItemModal } from "../../../movieList.model";
 // import { convertToYear } from "../../../../helpers/helpers";
 import {
   convertToYear,

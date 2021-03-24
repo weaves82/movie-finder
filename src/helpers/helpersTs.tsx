@@ -4,6 +4,11 @@ import { MOVIE_DB_URL } from "../appConstants";
 import { updateMoviesSearch, updateMoviesFilter } from "../actions/index";
 import { searchType } from "../component/recentSearch.model";
 import { CastItem, CrewItem } from "../component/movieList.model";
+import {
+  CertObject,
+  GenreObject,
+  FilterPropsObj,
+} from "../component/filterForm.model";
 const { REACT_APP_MOVIE_API } = process.env;
 
 export const randomizeNumber = (maxValue = 0) => {
@@ -15,30 +20,30 @@ export const convertToYear = (stringdate = "") => {
   return mydate.getFullYear().toString();
 };
 
-const getGenreTerm = async (id: any) => {
-  const genres = await getGenres();
+// const getGenreTerm = async (id: any) => {
+//   const genres = await getGenres();
 
-  const genreObject = genres.find((item) => item.id.toString() === id);
+//   const genreObject = genres.find((item) => item.id.toString() === id);
 
-  return genreObject?.name;
-};
+//   return genreObject?.name;
+// };
 
 const getSearchTerms = (object: any) => {
-  let filtersArray = [];
+  let filtersArray: string[] = [];
   for (const key in object) {
     if (Object.prototype.hasOwnProperty.call(object, key)) {
       if (key === "genres") {
-        object[key].map((item: any) => {
-          filtersArray.push(item.label);
+        object[key].map((item: GenreObject) => {
+          return filtersArray.push(item.label);
         });
       }
       if (key === "certificates") {
-        object[key].map((item: any) => {
-          filtersArray.push(item.id);
+        object[key].map((item: CertObject) => {
+          return filtersArray.push(item.id);
         });
       }
       if (key === "year") {
-        filtersArray.push(object[key]);
+        return filtersArray.push(object[key]);
       }
     }
   }
@@ -48,7 +53,7 @@ const getSearchTerms = (object: any) => {
 
 export const getHeading = (
   searchTypeInput: searchType,
-  searchTerms: string | {}
+  searchTerms: FilterPropsObj
 ) => {
   switch (searchTypeInput) {
     case searchType.Filter:
@@ -134,10 +139,10 @@ export const getMovieDetails = async (id: number) => {
 
     await Promise.allSettled(prm).then((results) => {
       return results.map((result) => {
-        mergeResults = {
+        return (mergeResults = {
           ...mergeResults,
           ...(result as PromiseFulfilledResult<any>).value.data,
-        };
+        });
       });
     });
 

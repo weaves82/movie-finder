@@ -4,21 +4,21 @@ import Checkbox from "../../UI/Form/Checkbox/Checkbox";
 import { getGenres } from "../../../helpers/helpersTs";
 
 import {
-  filterProps,
-  filterArrayProps,
-  genreObject,
+  FilterProps,
+  FilterArrayProps,
+  GenreObject,
 } from "../../filterForm.model";
 
 import "./GenreFilter.scss";
 
-const GenreFilter = (props: filterProps) => {
-  const [filters, setFilters] = React.useState<filterArrayProps[]>([]);
-  const [checkBoxes, setCheckBoxes] = React.useState<genreObject[]>([]);
+const GenreFilter = (props: FilterProps) => {
+  const [filters, setFilters] = React.useState<FilterArrayProps[]>([]);
+  const [checkBoxes, setCheckBoxes] = React.useState<GenreObject[]>([]);
 
   React.useEffect(() => {
     async function fetchData() {
       const genres = await getGenres();
-      let genreArray: filterArrayProps[] = [];
+      let genreArray: FilterArrayProps[] = [];
       genres.map((item) => {
         genreArray.push({
           id: item.id.toString(),

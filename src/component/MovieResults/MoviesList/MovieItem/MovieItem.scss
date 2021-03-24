@@ -22,4 +22,8 @@ $item-width : percentage(1/$items);
 
 .movie-item__title {
   margin-bottom: calc(var(--gutter)/2);
+  max-width: 200px;
+  @media only screen and (min-width: 680px) {
+    max-width: auto;
+  }
 }

@@ -3,14 +3,14 @@ import { shallow } from "enzyme";
 
 import YearFilter from "./YearFilter";
 import TextInput from "../../UI/Form/TextInput/TextInput";
-import { filterProps } from "../../filterForm.model";
+import { FilterProps } from "../../filterForm.model";
 
 const initialProps = {
   onChange: jest.fn(),
   isReset: false,
 };
 
-const setup = (props: filterProps = initialProps) => {
+const setup = (props: FilterProps = initialProps) => {
   return shallow(<YearFilter {...props} />);
 };
 

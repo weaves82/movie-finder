@@ -4,20 +4,19 @@ import { shallow, mount } from "enzyme";
 import * as helpers from "../../../helpers/helpersTs";
 
 import GenreFilter from "./GenreFilter";
-import { filterProps, filterArrayProps } from "../../filterForm.model";
+import { FilterProps, FilterArrayProps } from "../../filterForm.model";
 import Checkbox from "../../UI/Form/Checkbox/Checkbox";
-import { ShallowRenderer } from "react-dom/test-utils";
 
 const initialProps = {
   onChange: jest.fn(),
   isReset: false,
 };
 
-const setup = (props: filterProps = initialProps) => {
+const setup = (props: FilterProps = initialProps) => {
   return shallow(<GenreFilter {...props} />);
 };
 
-const setupMount = (props: filterProps = initialProps) => {
+const setupMount = (props: FilterProps = initialProps) => {
   return mount(<GenreFilter {...props} />);
 };
 
@@ -67,7 +66,7 @@ describe("useEffect is working as expected", () => {
     { id: 12, name: "Adventure" },
     { id: 16, name: "Animation" },
   ];
-  let mockGenresWithLabel: filterArrayProps[] = [
+  let mockGenresWithLabel: FilterArrayProps[] = [
     { id: "28", label: "Action" },
     { id: "12", label: "Adventure" },
     { id: "16", label: "Animation" },

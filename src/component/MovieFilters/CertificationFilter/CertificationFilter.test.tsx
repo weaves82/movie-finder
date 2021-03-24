@@ -4,11 +4,7 @@ import { shallow, mount } from "enzyme";
 import * as helpers from "../../../helpers/helpersTs";
 
 import CertificationFilter from "./CertificationFilter";
-import {
-  filterProps,
-  filterArrayProps,
-  certObject,
-} from "../../filterForm.model";
+import { FilterProps } from "../../filterForm.model";
 import Checkbox from "../../UI/Form/Checkbox/Checkbox";
 
 const initialProps = {
@@ -16,11 +12,11 @@ const initialProps = {
   isReset: false,
 };
 
-const setup = (props: filterProps = initialProps) => {
+const setup = (props: FilterProps = initialProps) => {
   return shallow(<CertificationFilter {...props} />);
 };
 
-const setupMount = (props: filterProps = initialProps) => {
+const setupMount = (props: FilterProps = initialProps) => {
   return mount(<CertificationFilter {...props} />);
 };
 

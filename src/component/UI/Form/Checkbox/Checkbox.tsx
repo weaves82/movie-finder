@@ -1,7 +1,7 @@
 import React from "react";
-import { checkboxProps } from "../../../filterForm.model";
+import { CheckboxProps } from "../../../filterForm.model";
 
-const CheckBox: React.FC<checkboxProps> = (props) => {
+const CheckBox: React.FC<CheckboxProps> = (props) => {
   const { label, id, order, onChange, isReset } = props;
 
   const [checked, setChecked] = React.useState<boolean>(false);

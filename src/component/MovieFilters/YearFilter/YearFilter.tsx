@@ -1,9 +1,9 @@
 import React from "react";
 import TextInput from "../../UI/Form/TextInput/TextInput";
 
-import { filterProps } from "../../filterForm.model";
+import { FilterProps } from "../../filterForm.model";
 
-const YearFilter = (props: filterProps) => {
+const YearFilter = (props: FilterProps) => {
   const onChangeHandler = (value: string) => {
     props.onChange({ year: value });
   };

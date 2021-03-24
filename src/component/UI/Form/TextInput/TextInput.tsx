@@ -1,7 +1,7 @@
 import React, { FormEvent } from "react";
-import { inputProps } from "../../../filterForm.model";
+import { InputProps } from "../../../filterForm.model";
 
-const TextInput: React.FC<inputProps> = (props) => {
+const TextInput: React.FC<InputProps> = (props) => {
   const { label, id, onChange, isReset } = props;
 
   const [value, setValue] = React.useState<string>("");

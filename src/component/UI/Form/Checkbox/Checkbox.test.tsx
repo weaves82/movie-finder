@@ -3,7 +3,7 @@ import { shallow, mount } from "enzyme";
 import { findByTestAttr } from "../../../../test/testUtils";
 
 import Checkbox from "./Checkbox";
-import { checkboxProps } from "../../../filterForm.model";
+import { CheckboxProps } from "../../../filterForm.model";
 
 const initialProps = {
   label: "name",
@@ -13,11 +13,11 @@ const initialProps = {
   order: 2,
 };
 
-const setup = (props: checkboxProps = initialProps) => {
+const setup = (props: CheckboxProps = initialProps) => {
   return shallow(<Checkbox {...props} />);
 };
 
-const setupMount = (props: checkboxProps = initialProps) => {
+const setupMount = (props: CheckboxProps = initialProps) => {
   return mount(<Checkbox {...props} />);
 };
 

@@ -1,31 +1,31 @@
-export interface certObject {
+export interface CertObject {
   order?: number;
   id: string;
   label: string;
 }
 
-export interface genreObject {
+export interface GenreObject {
   id: string;
   label: string;
 }
 
-interface filterPropsObj {
-  certificates?: certObject[];
-  genres?: genreObject[];
+export interface FilterPropsObj {
+  certificates?: CertObject[];
+  genres?: GenreObject[];
   year?: string;
 }
-export interface filterProps {
-  onChange: (obj: filterPropsObj) => void;
+export interface FilterProps {
+  onChange: (obj: FilterPropsObj) => void;
   isReset: boolean;
 }
 
-export interface filterArrayProps {
+export interface FilterArrayProps {
   id: string;
   label: string;
   order?: number;
 }
 
-export interface checkboxProps {
+export interface CheckboxProps {
   id: string;
   label: string;
   onChange: (
@@ -38,7 +38,7 @@ export interface checkboxProps {
   order?: number;
 }
 
-export interface inputProps {
+export interface InputProps {
   id: string;
   label: string;
   onChange: (textInput: string) => void;

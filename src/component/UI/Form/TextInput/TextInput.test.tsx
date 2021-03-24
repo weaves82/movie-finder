@@ -3,7 +3,7 @@ import { shallow, mount } from "enzyme";
 import { findByTestAttr } from "../../../../test/testUtils";
 
 import TextInput from "./TextInput";
-import { inputProps } from "../../../filterForm.model";
+import { InputProps } from "../../../filterForm.model";
 
 const initialProps = {
   label: "name",
@@ -12,11 +12,11 @@ const initialProps = {
   isReset: false,
 };
 
-const setup = (props: inputProps = initialProps) => {
+const setup = (props: InputProps = initialProps) => {
   return shallow(<TextInput {...props} />);
 };
 
-const setupMount = (props: inputProps = initialProps) => {
+const setupMount = (props: InputProps = initialProps) => {
   return mount(<TextInput {...props} />);
 };
 
